@@ -98,7 +98,7 @@ section#home::before {
     font-size: 10rem;
     top: 70%;
     left: 20%;
-    width: 100%;
+    width: 80%;
 
     color: rgb(122, 122, 122);
     z-index: -1;
