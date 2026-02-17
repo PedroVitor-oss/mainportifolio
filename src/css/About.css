@@ -1,17 +1,38 @@
 section#About {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    padding: 50px 20px;
+    --bg: #0b0d10;
+    --card-bg: rgba(78, 78, 78, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #2b2b2b;
+    --muted: #555555;
+
+    --accent: linear-gradient(135deg, #7c7cff, #38bdf8, #22d3ee);
+}
+
+section#About {
+    margin-top: 120px;
+    padding: 80px 20px;
+    /* background:
+        radial-gradient(600px circle at 10% 10%, rgba(124, 124, 255, .12), transparent 40%),
+        radial-gradient(600px circle at 90% 30%, rgba(56, 189, 248, .12), transparent 40%),
+        var(--bg); */
+
+    color: var(--text);
 
     /* background-color: #f5f5f5; */
     & div.title {
         text-align: start;
 
         & h1 {
-            margin-top: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            background: var(--accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        & span {
+            color: var(--muted);
+            letter-spacing: .25em;
+            font-size: .75rem;
         }
     }
 
@@ -22,29 +43,98 @@ section#About {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
 
+        & div:hover {
+            transform: translateY(-6px);
+            border-color: rgba(124, 124, 255, .6);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, .4),
+                inset 0 0 0 1px rgba(255, 255, 255, .04);
+        }
+
         & div {
-            /* background-attachment: fixed; */
-            background-color: #f3f3f3;
-            border-radius: 10px;
-            text-align: start;
-            padding: 20px;
-            box-sizing: border-box;
+            background: var(--card-bg);
+            backdrop-filter: blur(14px);
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border .3s ease;
+
+            & h3 {
+                display: flex;
+                align-items: center;
+                gap: .6rem;
+                margin-bottom: 1rem;
+
+                & .card-icon {
+                    font-size: 1.2rem;
+                }
+            }
+
+
             & h4 {
                 margin-bottom: 0;
             }
+
             & p {
                 margin: 0;
             }
+
+            .about-text {
+                line-height: 1.8;
+                color: var(--muted);
+            }
+
+            .about-text .icon {
+                               float: left;
+                font-size: 2.5rem;
+                width: 64px;
+                height: 64px;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                margin: .25rem 1rem .5rem 0;
+                background: var(--accent);
+                color: #000;
+                shape-outside: circle();
+                justify-items: center;
+                align-items: center;
+            }
+
+            & ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+                padding: 0;
+                list-style: none;
+
+                & li {
+                    background: rgba(255, 255, 255, .08);
+                    border: 1px solid var(--border);
+                    padding: .35rem .65rem;
+                    border-radius: 999px;
+                    font-size: .85rem;
+                }
+            }
+
         }
+
         & .div1 {
             grid-area: 1 / 4 / 5 / 7;
         }
 
         & .div2 {
-            grid-area: 1 / 7 / 5 / 10;
+            grid-area: 1 / 7 / 6 / 10;
         }
 
         & .div3 {
+            text-align: start;
+              background:
+    linear-gradient(180deg, rgba(124,124,255,.15), transparent),
+    var(--card-bg);
             grid-area: 1 / 1 / 8 / 4;
         }
 
@@ -53,11 +143,11 @@ section#About {
         }
 
         & .div5 {
-            grid-area: 5 / 7 / 10 / 10;
+            grid-area: 6 / 7 / 11 / 10;
         }
 
         & .div6 {
-            grid-area: 8 / 1 / 13 / 4;
+            grid-area: 8 / 1 / 11 / 5;
         }
     }
 
