@@ -8,7 +8,7 @@ section#About {
     --accent: linear-gradient(135deg, #7c7cff, #38bdf8, #22d3ee);
 }
 
-section#About {
+section#About  main{
     margin-top: 120px;
     padding: 80px 20px;
     /* background:
@@ -27,6 +27,7 @@ section#About {
             background: var(--accent);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-top: 0;
         }
 
         & span {
@@ -39,11 +40,11 @@ section#About {
     & .grid-container {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
 
-        & div:hover {
+        & div.card-info:hover {
             transform: translateY(-6px);
             border-color: rgba(124, 124, 255, .6);
             box-shadow:
@@ -51,17 +52,26 @@ section#About {
                 inset 0 0 0 1px rgba(255, 255, 255, .04);
         }
 
-        & div {
+        & div.card-info {
             background: var(--card-bg);
             backdrop-filter: blur(14px);
             border-radius: 18px;
             padding: 24px;
             border: 1px solid var(--border);
-            
+
             transition:
                 transform .3s ease,
                 box-shadow .3s ease,
                 border .3s ease;
+
+            & div.banner{
+                display: block;
+                width: 100%;
+                height: 50%;
+                border-radius: 20px;
+                background-size: 100%;
+                
+            }
 
             & h3 {
                 display: flex;
@@ -89,7 +99,7 @@ section#About {
             }
 
             .about-text .icon {
-                               float: left;
+                float: left;
                 font-size: 2.5rem;
                 width: 64px;
                 height: 64px;
@@ -132,15 +142,32 @@ section#About {
 
         & .div3 {
             text-align: start;
-              background:
-    linear-gradient(180deg, rgba(124,124,255,.15), transparent),
-    var(--card-bg);
+            background:
+                linear-gradient(180deg, rgba(124, 124, 255, .15), transparent),
+                var(--card-bg);
             grid-area: 1 / 1 / 8 / 4;
+        }
+
+        & .div4:hover img {
+            width: 100%;
+            margin-top: -244px;
         }
 
         & .div4 {
             grid-area: 5 / 4 / 8 / 7;
+
+            & img {
+                width: 57%;
+                margin-top: -94px;
+                z-index: -1;
+                position: relative;
+                transition: 0.5s;
+                transform: translateX(100px);
+            }
+
         }
+
+
 
         & .div5 {
             grid-area: 6 / 7 / 11 / 10;

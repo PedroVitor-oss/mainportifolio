@@ -4,6 +4,8 @@ import profileImage from '../assets/pedro-vitor.png'
 function Home() {
   return (
     <section id="home">
+        <main>
+
         <div className="cont-text">
             <span className="profession">Desenvolvedor Full-Stack | C# & JavaScript/TypeScript | Interfaces e Sistemas </span>
             <h1 className="name">Pedro Vitor</h1>
@@ -20,7 +22,8 @@ function Home() {
 
             </div>
         </div>
-    
+            </main>
+
     </section>
   )
 }
