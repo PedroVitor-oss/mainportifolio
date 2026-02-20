@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import '../css/Home.css'
-import profileImage from '../assets/pedro-vitor.png'
+import '../../css/Home.css'
+import profileImage from '../../assets/pedro-vitor.png'
 function Home() {
   return (
     <section id="home">

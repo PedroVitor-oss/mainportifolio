@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import '../css/About.css'
-import dino3D from '../assets/dino3d.png'
-import bannerFront from "../assets/banner-front.jpg"
-import bannerBack from "../assets/banner-back.jpg"
+import '../../css/About.css'
+import dino3D from '../../assets/dino3d.png'
+import bannerFront from "../../assets/banner-front.jpg"
+import bannerBack from "../../assets/banner-back.jpg"
 import { motion } from "motion/react"
 let bannerFrontStyle = {
     backgroundImage: `url(${bannerFront})`,

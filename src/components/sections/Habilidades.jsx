@@ -1,5 +1,5 @@
 import { } from 'react'
-import '../css/Habilidades.css';
+import '../../css/Habilidades.css';
 
 const skills = [
     {
