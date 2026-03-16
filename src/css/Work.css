@@ -1,0 +1,11 @@
+section#Works {
+  padding: 50px 0;
+  & .cont-slide-projects{
+    /* background-color: #3b3b3b; */
+    height: 200px;
+    width: calc(1280px / 2 - 20px);
+    margin: auto;
+    /* overflow: hidden; */
+  }
+}
+

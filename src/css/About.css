@@ -11,6 +11,7 @@ section#About {
 section#About  main{
     margin-top: 120px;
     padding: 80px 20px;
+    overflow: hidden;
     /* background:
         radial-gradient(600px circle at 10% 10%, rgba(124, 124, 255, .12), transparent 40%),
         radial-gradient(600px circle at 90% 30%, rgba(56, 189, 248, .12), transparent 40%),

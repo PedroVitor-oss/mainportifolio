@@ -1,0 +1,12 @@
+.project-card
+{
+    background-color: #fff;
+    border-radius: 20px;
+    height: 300px;
+    width:calc(1280px / 2 - 20px);
+    text-align: start;
+    padding: 29px;
+    box-sizing: border-box;
+    box-shadow: rgba(36, 36, 36, 0.7) 0px 1px 5px -4px, rgba(36, 36, 36, 0.05) 0px 4px 8px 0px;
+    justify-content: sa;
+}
