@@ -16,7 +16,9 @@ section#home main{
             /*tudo em letra maiusculas */
             text-transform: uppercase;
         }
-
+& .cont-img.mobile{
+    display: none;
+}
         & h1 {
             font-size: 3.5rem;
             line-height: 3rem;
@@ -114,4 +116,45 @@ section#home::before {
     }
     
 }
+@keyframes text-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-45%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
+
+@media (max-width : 400px) {
+    section#home main{
+    text-align: start;
+    /* background-color: red; */
+    margin-top: 10vh;
+    display: flex;
+    & span {
+        width: 80vw;
+        overflow: hidden;
+        &  p {
+            width: 200vw;
+            animation: text-scroll 20s linear infinite;
+        }
+    }
+    & .cont-img.mobile{
+        display: block !important;
+        & div.mold {
+            max-width: 250px;
+        }
+    }   
+    & .about-me{
+        width:80%
+    }
+    }
+    section#home::before {
+    font-size: 3.5rem;
+    transform: translateX(-20%);
+}
+}

@@ -7,9 +7,16 @@ function Home() {
         <main>
 
         <div className="cont-text">
-            <span className="profession">Desenvolvedor Full-Stack | C# & JavaScript/TypeScript | Interfaces e Sistemas </span>
+            <span className="profession">
+                <p>Desenvolvedor Full-Stack | C# & JavaScript/TypeScript | Interfaces e Sistemas </p></span>
             <h1 className="name">Pedro Vitor</h1>
             <h1 className="last-name">Ferreira dos Santos</h1>
+            <div className="cont-img mobile">
+            <div className="mold">
+            <img src={profileImage} alt="Profile Image" />
+
+            </div>
+        </div>
             <p className="about-me">Desenvolvedor Full-Stack com foco em criar soluções eficientes e escaláveis utilizando tecnologias modernas como VueJS, NodeJS, C# e JavaScript/TypeScript.</p>
             <div className="routes">
                 <a href="#works">Trabalhos </a>
