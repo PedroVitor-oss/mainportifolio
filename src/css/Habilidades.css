@@ -144,3 +144,12 @@ section#Habilidades {
     }
 
 }
+
+
+@media (max-width : 400px) {
+    div.cont-cards-info{
+    flex-direction: column !important;
+    width: 75vw !important;
+    align-content: center;
+    }
+}
