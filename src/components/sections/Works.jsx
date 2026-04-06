@@ -44,7 +44,7 @@ export default function Works() {
                     <p>Projetos desenvolvidos ao longo da minha carreira.</p>
                 </div>
                 <div
-                    className="w-full h-80 flex-1 overflow-hidden">
+                    className=" main-cont-slide w-full h-80 flex-1 overflow-hidden">
 
 
                     <div className="cont-slide-projects">

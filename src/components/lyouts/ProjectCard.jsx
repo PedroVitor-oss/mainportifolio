@@ -10,9 +10,9 @@ function ProjectCard({ data, title, about, tags }) {
             className="project-card aspect-video w-full shrink-0 rounded-b-xl scale-98"
         >
             <div
-                className="flex-1 flex flex-row h-40 "
+                className="face flex-1 flex flex-row h-40 "
             >
-                <div className="w-60 px-2">
+                <div className=" cont-img w-60 px-2">
                     <img
                         className="w-20 rounded-3xl"
                         src={profileImage} alt="" />
@@ -24,7 +24,7 @@ function ProjectCard({ data, title, about, tags }) {
                 </div>
             </div>
             <hr className="border-gray-400 w-90%" />
-            <div className="flex flex-row justify-around mt-5">
+            <div className="tags flex flex-row justify-around mt-5">
                 <div>
                     {tagsRender}
                 </div>

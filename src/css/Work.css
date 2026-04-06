@@ -3,9 +3,24 @@ section#Works {
   & .cont-slide-projects{
     /* background-color: #3b3b3b; */
     height: 200px;
-    width: calc(1280px / 2 - 20px);
+    width: calc(1280% / 2 - 20px);
     margin: auto;
     /* overflow: hidden; */
   }
+}
+
+@media (max-width : 400px) {
+    .main-cont-slide{
+      /* transform: translateX(-25px); */
+      /* background-color: purple; */
+      width: calc(100% + 50px);
+      height: 700px;
+    }
+
+    .cont-slide-projects{
+      /* background-color: blue; */
+      /* margin: 0 !important; */
+      height: 800px;
+    }
 }
 
