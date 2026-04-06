@@ -27,7 +27,6 @@ function ProjectCard({ data, title, about, tags }) {
             <div className="flex flex-row justify-around mt-5">
                 <div>
                     {tagsRender}
-
                 </div>
                 <button className="px-3 py-2 bg-neutral-800 text-neutral-50 rounded-2xl">Ver mais</button>
 
