@@ -1,13 +1,25 @@
 import { useState } from "react";
-import { motion,useMotionValue} from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import "../../css/Work.css";
 import ProjectCard from "../lyouts/ProjectCard";
 
 const projetos = [
-    { title: "Catecumenato1", about: "Ferramenta avançada de análise estática que inspeciona automaticamente repositórios Python, identificando problemas de qualidade, código duplicado, complexidade excessiva e oportunidades de refatoração. Processamento 100% local sem dependências externas.", tags: ["Node.js", "Express", "JS"] },
-    { title: "Catecumenato2", about: "Projeto desenvolvido para coisas", tags: ["Node.js", "Express", "JS"] },
-    { title: "Catecumenato3", about: "Projeto desenvolvido para coisas", tags: ["Node.js", "Express", "JS"] },
-    { title: "Catecumenato4", about: "Projeto desenvolvido para coisas", tags: ["Node.js", "Express", "JS"] },
+    {
+        title: "Sistema de Catecumenato",
+        about: "Sistema web em Node.js e Express para gerenciamento de catecúmenos, com formulários dinâmicos, controle de presença, administração de turmas e autenticação por token.",
+        tags: ["Node.js", "Express", "JavaScript"]
+    },
+    { title: "Token Validation System", about: "Sistema de validação de tokens com front-end e back-end separados usando Express e CORS. Geração e verificação de tokens com expiração, status do servidor em tempo real e timer dinâmico. Foco em baixa latência e comunicação cross-origin 100% local.", tags: ["Node.js", "Express", "CORS", "JavaScript"] },
+    {
+        "title": "LineFPSGame",
+        "about": "FPS multiplayer online no navegador com renderização via raycasting em canvas, incluindo movimentação básica, colisão com paredes e sistema de tiros. Desenvolvido para estudo de comunicação em tempo real com Socket.IO.",
+        "tags": ["Node.js", "Express", "Socket.IO", "JavaScript", "Multiplayer", "Raycasting", "Canvas"]
+    },
+    {
+    "title": "EcoPlanilha",
+    "about": "Sistema web em Node.js para processamento de PDFs ambientais (DMRs), extraindo dados de planilhas, realizando cálculos por período e gerando planilhas Excel automaticamente em lote.",
+    "tags": ["Node.js", "JavaScript", "pdf-parse", "Automação", "Processamento de PDF", "Excel", "Web"]
+}
 ];
 const DRAG_BUFFER = 50;
 
@@ -25,9 +37,9 @@ export default function Works() {
         setDragging(false);
         console.log("end drag");
         const x = dragX.get();
-        if (x <= - DRAG_BUFFER && projectIndex<projetos.length-1) {
+        if (x <= - DRAG_BUFFER && projectIndex < projetos.length - 1) {
             setProjectIndex(pv => pv + 1);
-        } else if (x >= DRAG_BUFFER  && projectIndex>0) {
+        } else if (x >= DRAG_BUFFER && projectIndex > 0) {
             setProjectIndex(pv => pv - 1);
 
         }
@@ -59,16 +71,16 @@ export default function Works() {
                                 }}
                                 style={{
                                     x: dragX,
-                                    transition:'0.2s'
+                                    transition: '0.2s'
                                 }}
                                 animate={{
                                     translateX: `-${projectIndex * 100}%`,
-                                    
+
                                 }}
-                                
+
                                 onDragStart={onDragStart}
                                 onDragEnd={onDragEnd}
-                                
+
                                 className="flex items-center content-center cursor-grab active:cursor-grabbing "
                             >
                                 <Projetos projectIndex={projectIndex}></Projetos>
@@ -82,7 +94,7 @@ export default function Works() {
     );
 }
 const Projetos = ({ projectIndex }) => {
-    console.log("projectIndex: ",projectIndex)
+    console.log("projectIndex: ", projectIndex)
     return (
         <>
             {projetos.map((data, id) => (
